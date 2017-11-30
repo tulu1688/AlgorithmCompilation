@@ -1,6 +1,5 @@
 [Trees: Is This a Binary Search Tree?](https://www.hackerrank.com/challenges/ctci-is-binary-search-tree/problem)
 
-***
 /* Hidden stub code will pass a root argument to the function below. Complete the function to solve the challenge. Hint: you may want to write one or more helper functions.  
 
 The Node class is defined as follows:
@@ -10,6 +9,8 @@ The Node class is defined as follows:
         Node right;
      }
 */
+
+***
     int getMaxNodeVal(Node node){
         Node visitor = node;
         while (visitor.right != null)
