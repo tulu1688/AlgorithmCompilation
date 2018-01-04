@@ -23,6 +23,12 @@ public class MaxHeap {
         return ret;
     }
 
+    public int peek() throws Exception{
+        if (heapSize == 0)
+            throw new Exception("heap is empty");
+        return array[0];
+    }
+
     public void add(int value){
         if (heapSize == array.length)
             increaseHeapMemo();
