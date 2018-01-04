@@ -3,7 +3,7 @@ package com.tulu.hackerrank;
 import java.util.Scanner;
 
 public class FindTheRunningMean {
-    private static float getMedian(int[] arr, int startIndex, int endIndex){
+    private static float getMedian(int[] arr, int startIndex, int endIndex) {
         if ((endIndex - startIndex) % 2 == 0) {
             int middleIndex = startIndex + (endIndex - startIndex) / 2;
             return (float) arr[middleIndex];
@@ -14,14 +14,14 @@ public class FindTheRunningMean {
     }
 
     private static void insertNumber(int addedValue, int[] arr, int index, int endIndex) {
-        for (int i = endIndex - 1; i > index; i--){
-            arr[i] = arr[i-1];
+        for (int i = endIndex - 1; i > index; i--) {
+            arr[i] = arr[i - 1];
         }
         arr[index] = addedValue;
     }
 
 
-    private static void addNumber(int addedValue, int[] arr, int startIndex, int endIndex, int maxIndex){
+    private static void addNumber(int addedValue, int[] arr, int startIndex, int endIndex, int maxIndex) {
         if (endIndex == -1) {
             arr[0] = addedValue;
         } else if (startIndex == endIndex) {
@@ -52,7 +52,7 @@ public class FindTheRunningMean {
         int[] a = new int[n];
         int[] s = new int[n];
 
-        for(int a_i=0; a_i < n; a_i++){
+        for (int a_i = 0; a_i < n; a_i++) {
             a[a_i] = in.nextInt();
             addNumber(a[a_i], s, 0, a_i - 1, a_i);
             System.out.println(getMedian(s, 0, a_i));
