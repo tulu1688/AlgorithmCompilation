@@ -17,26 +17,30 @@ public class RotationArrayUtilsTest {
         assertArrayEquals(new int[]{6,2,1,2,4,2,3,4},array);
     }
 
-    @Test(expected = Exception.class)
+    @Test
     public void test__rotationArrayWithoutExtraMem__withNullInputArray__shouldThrowException() throws Exception{
+        exception.expect(Exception.class);
         RotationArrayUtils.rotationArrayWithoutExtraMem(null,2);
         exception.expectMessage("Input array is null");
     }
 
-    @Test(expected = Exception.class)
+    @Test
     public void test__rotationArrayWithoutExtraMem__withStepEqualZero__shouldThrowException() throws Exception{
+        exception.expect(Exception.class);
         RotationArrayUtils.rotationArrayWithoutExtraMem(null,0);
         exception.expectMessage("Rotation step must be greater than 0");
     }
 
-    @Test(expected = Exception.class)
+    @Test
     public void test__rotationArrayWithoutExtraMem__withNegativeStep__shouldThrowException() throws Exception{
+        exception.expect(Exception.class);
         RotationArrayUtils.rotationArrayWithoutExtraMem(null,0);
         exception.expectMessage("Rotation step must be greater than 0");
     }
 
-    @Test(expected = Exception.class)
+    @Test
     public void test__rotationArrayWithoutExtraMem__withArrayLengthSmallerThanStep__shouldThrowException() throws Exception{
+        exception.expect(Exception.class);
         RotationArrayUtils.rotationArrayWithoutExtraMem(new int[]{1,2},3);
         exception.expectMessage("Input array length is smaller than rotation step");
     }

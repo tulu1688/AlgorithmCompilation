@@ -37,12 +37,13 @@ public class MaxHeapTest {
         assertTrue(heap.isEmpty());
     }
 
-    @Test(expected = Exception.class)
+    @Test
     public void test__poll__emptyHeap__shouldThrowException() throws Exception{
         MaxHeap heap = new MaxHeap();
-        heap.poll();
 
         exception.expect(Exception.class);
+        heap.poll();
+
         exception.expectMessage("heap is empty");
     }
 }

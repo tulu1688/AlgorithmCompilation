@@ -37,12 +37,13 @@ public class MinHeapTest {
         assertTrue(heap.isEmpty());
     }
 
-    @Test(expected = Exception.class)
+    @Test
     public void test__poll__emptyHeap__shouldThrowException() throws Exception{
         MinHeap heap = new MinHeap();
-        heap.poll();
 
         exception.expect(Exception.class);
+        heap.poll();
+
         exception.expectMessage("heap is empty");
     }
 }

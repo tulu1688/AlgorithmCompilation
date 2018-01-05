@@ -21,15 +21,19 @@ public class ReverseArrayUtilsTest {
         assertArrayEquals(new int[]{7,6,5,4,3,2,1},arr2);
     }
 
-    @Test(expected = Exception.class)
+    @Test
     public void test__reverseArrayWithoutMemSwap__emptyInputArray__shouldThrowException() throws Exception{
+        exception.expect(Exception.class);
+
         ReverseArrayUtils.reverseArrayWithoutMemSwap(new int[]{});
 
         exception.expectMessage("empty array");
     }
 
-    @Test(expected = Exception.class)
+    @Test
     public void test__reverseArrayWithoutMemSwap__inputArrayIsNull__shouldThrowException() throws Exception{
+        exception.expect(Exception.class);
+
         ReverseArrayUtils.reverseArrayWithoutMemSwap(null);
 
         exception.expectMessage("input array is null");
