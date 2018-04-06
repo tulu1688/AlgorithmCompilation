@@ -1,5 +1,6 @@
 package com.tulu.data.structure.linklist;
 
+import com.tulu.data.structure.model.Node;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

@@ -1,5 +1,7 @@
 package com.tulu.data.structure.linklist;
 
+import com.tulu.data.structure.model.Node;
+
 public class AddNumberInLinkListForm {
     public static Node addNumber(Node number1, Node number2){
         int carry = 0;

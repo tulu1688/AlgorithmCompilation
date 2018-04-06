@@ -1,5 +1,7 @@
 package com.tulu.data.structure.linklist;
 
+import com.tulu.data.structure.model.Node;
+
 import java.util.HashMap;
 
 public class LinkListUtil {
