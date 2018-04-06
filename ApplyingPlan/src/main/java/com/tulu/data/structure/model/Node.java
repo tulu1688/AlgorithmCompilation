@@ -1,19 +1,19 @@
 package com.tulu.data.structure.model;
 
-public class Node {
-    private Object data;
+public class Node<T> {
+    private T data;
     private Node next;
 
-    public Node(Object value) {
+    public Node(T value) {
         data = value;
         next = null;
     }
 
-    public Object getData() {
+    public T getData() {
         return data;
     }
 
-    public void setData(Comparable data) {
+    public void setData(T data) {
         this.data = data;
     }
 
