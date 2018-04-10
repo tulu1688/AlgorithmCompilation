@@ -6,7 +6,7 @@ import static org.junit.Assert.*;
 
 public class QueueTest {
     @Test
-    public void test__addQueue(){
+    public void test_enqueue(){
         Queue queue = new Queue();
         queue.enqueue(1);
         queue.enqueue(2);
@@ -17,7 +17,7 @@ public class QueueTest {
     }
 
     @Test
-    public void test__deQueue(){
+    public void test__dequeue(){
         Queue queue = new Queue();
         assertNull(queue.dequeue());
 
