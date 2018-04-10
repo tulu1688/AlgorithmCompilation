@@ -12,10 +12,12 @@ public class QueueByTwoStackTest {
         queue.enqueue(1);
         queue.enqueue(2);
         queue.enqueue(10);
-
         assertEquals(1,queue.dequeue());
+        queue.enqueue(100);
         assertEquals(2,queue.dequeue());
         assertEquals(10,queue.dequeue());
+        assertEquals(100,queue.dequeue());
+
         assertNull(queue.dequeue());
     }
 
