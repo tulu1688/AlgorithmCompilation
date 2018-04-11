@@ -14,4 +14,8 @@ public class QueueByTwoStack<T> {
                 dequeueStack.push(enqueueStack.pop());
         return dequeueStack.pop();
     }
+
+    public long size(){
+        return enqueueStack.size() + dequeueStack.size();
+    }
 }
